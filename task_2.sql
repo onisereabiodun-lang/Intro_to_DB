@@ -1,4 +1,4 @@
--- Select the database
+-- Use the database
 USE alx_book_store;
 
 -- Create Authors table
@@ -16,11 +16,12 @@ CREATE TABLE IF NOT EXISTS Books (
     FOREIGN KEY (author_id) REFERENCES Authors(author_id)
 );
 
--- Create Customers table
+-- Create Customers table (FIXED)
 CREATE TABLE IF NOT EXISTS Customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
-    customer_name VARCHAR(100) NOT NULL,
-    email VARCHAR(100)
+    customer_name VARCHAR(215) NOT NULL,
+    email VARCHAR(215),
+    address TEXT
 );
 
 -- Create Orders table
